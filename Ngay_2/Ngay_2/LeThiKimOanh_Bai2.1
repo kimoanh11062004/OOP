@@ -1,0 +1,23 @@
+public class Main {
+
+//    public String replaceAll(String regex, String replacement)
+    public static String removeAccent(String input) {
+            String output = input.replaceAll("[àáạảãâầấậẩẫăằắặẳẵ]", "a")
+                    .replaceAll("[èéẹẻẽêềếệểễ]", "e")
+                    .replaceAll("[ìíịỉĩ]", "i")
+                    .replaceAll("[òóọỏõôồốộổỗơờớợởỡ]", "o")
+                    .replaceAll("[ùúụủũưừứựửữ]", "u")
+                    .replaceAll("[ỳýỵỷỹ]", "y")
+                    .replaceAll("[đ]", "d")
+                    .replaceAll("[Đ]", "D");
+            return output;
+        }
+        public static void main(String[] agrs ) {
+
+            String input = "Xin chào mọi người";
+            String output = removeAccent(input);
+            System.out.println(output); // output: "Xin chao moi nguoi"
+        }
+
+
+}
